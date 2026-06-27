@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name          = "RFIDReaderConnect"
-    spec.version       = ""
+    spec.version       = "0.0.1-test"
     spec.summary       = "A multiplatform framework for RFID reading."
     spec.homepage      = "https://github.com/RFIDReader/RFIDReaderConnect-swift-distribution"
     spec.license       = { :type => "Proprietary", :text => <<-LICENSE
