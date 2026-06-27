@@ -1,9 +1,10 @@
+// swift-tools-version:5.7
 import PackageDescription
 
 let package = Package(
     name: "RFIDReaderConnect",
     platforms: [
-        .macOS(.v13_0), .iOS(v13_0)
+        .macOS(.v13), .iOS(.v13)
     ],
     products: [
         .library(
@@ -14,13 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "RFIDReaderConnect",
-            url: "https://github.com/RFIDReader/RFIDReaderConnect-swift-distribution/raw/refs/heads/master/releases/download/v1.0.0/RFIDReaderConnect.xcframework.zip",
-            checksum: "2adb2ec08ec35f8a8b50cd88ec6b484a7582688c11655c2463b148ac4a84cab3"
+            url: "https://github.com/RFIDReader/RFIDReaderConnect-swift-distribution/raw/refs/heads/master/releases/download/v0.0.1-test/RFIDReaderConnect.xcframework.zip",
+            checksum: "6603f98cd2e1f7b989ea67ac4bf10e33a9d6dfb1bcf8e8c6e1abb8db06b20a4e"
         )
-//        .executableTarget(
-//            name: "RFIDReaderConnectTest",
-//            dependencies: ["RFIDReaderConnect"],
-//            path: "RFIDReaderConnectTest"
-//        )
     ]
 )
