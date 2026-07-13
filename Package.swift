@@ -15,8 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "RFIDReaderConnect",
-            url: "https://github.com/RFIDReader/RFIDReaderConnect-swift-distribution/raw/refs/heads/master/releases/download/v0.0.2-test/RFIDReaderConnect.xcframework.zip",
-            checksum: "ec3f262fed0a7df3c434dc2ccf1dec9481925795c5e29557c3c17afa7a4dc432"
+            url: "https://github.com/RFIDReader/RFIDReaderConnect-swift-distribution/raw/refs/heads/master/releases/download/v0.0.3/RFIDReaderConnect.xcframework.zip",
+            checksum: "fa0c31e3969edac8de46393794cd57a26be41768daef40d46f5d2ff276fed85c"
         )
     ]
 )
