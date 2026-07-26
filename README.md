@@ -1,40 +1,48 @@
-# RFIDReaderConnect for Apple platforms
+# HeliosSDK for Apple platforms
 
-RFIDReaderConnect is the supported Swift SDK for discovering, connecting to,
+HeliosSDK is the supported Swift SDK for discovering, connecting to,
 configuring, and reading tags from RFIDReader hardware on iPhone, iPad, and
 Mac. This distribution repository contains the compiled XCFramework, Swift
 Package manifest, CocoaPods specification, and hosted API documentation.
 
-> Current release: **0.0.1-test** · Minimum deployment: **iOS 13 / macOS 13**
+> Current release: **0.0.3** · Minimum deployment: **iOS 13 / macOS 13**
 
 ## Start here
 
 | Resource | Link |
 | --- | --- |
-| API reference | [Browse RFIDReaderConnect documentation](docs/index.html) |
-| Swift Package | `https://github.com/RFIDReader/RFIDReaderConnect-swift-distribution` |
-| Binary archive | [RFIDReaderConnect.xcframework.zip](releases/download/v0.0.1-test/RFIDReaderConnect.xcframework.zip) |
-| License | [RFIDReaderConnect SDK License Agreement](LICENSE) |
+| API reference | [Browse HeliosSDK documentation](docs/index.html) |
+| Swift Package | `https://github.com/RFIDReader/HeliosSDK-swift-distribution` |
+| Binary archive | [HeliosSDK.xcframework.zip](releases/download/v0.0.3/HeliosSDK.xcframework.zip) |
+| License | [HeliosSDK License Agreement](LICENSE) |
 
 ## Install with Swift Package Manager
 
 In Xcode, choose **File → Add Package Dependencies**, enter:
 
 ```text
-https://github.com/RFIDReader/RFIDReaderConnect-swift-distribution
+https://github.com/RFIDReader/HeliosSDK-swift-distribution
 ```
 
-Select the `RFIDReaderConnect` product and add it to your application target.
+Select the `HeliosSDK` product and add it to your application target.
 For a package manifest, use:
 
 ```swift
 dependencies: [
     .package(
-        url: "https://github.com/RFIDReader/RFIDReaderConnect-swift-distribution",
+        url: "https://github.com/RFIDReader/HeliosSDK-swift-distribution",
         branch: "master"
     )
 ]
 ```
+
+When declaring the dependency on a target, reference the product explicitly:
+
+```swift
+.product(name: "HeliosSDK", package: "HeliosSDK-swift-distribution")
+```
+
+Then `import HeliosSDK` in your Swift sources.
 
 The `master` branch always points at the latest published binary. Pin a commit
 in production if your release process requires reproducible dependencies.
@@ -49,7 +57,7 @@ platform :ios, '13.0'
 
 target 'MyApp' do
   use_frameworks!
-  pod 'RFIDReaderConnect', :podspec => 'https://raw.githubusercontent.com/RFIDReader/RFIDReaderConnect-swift-distribution/master/RFIDReaderConnect.podspec'
+  pod 'HeliosSDK', :podspec => 'https://raw.githubusercontent.com/RFIDReader/HeliosSDK-swift-distribution/master/HeliosSDK.podspec'
 end
 ```
 
@@ -57,8 +65,8 @@ Then run `pod install` and open the generated workspace.
 
 ## Manual installation
 
-1. Download and unzip [RFIDReaderConnect.xcframework.zip](releases/download/v0.0.1-test/RFIDReaderConnect.xcframework.zip).
-2. Drag `RFIDReaderConnect.xcframework` into the Xcode project.
+1. Download and unzip [HeliosSDK.xcframework.zip](releases/download/v0.0.3/HeliosSDK.xcframework.zip).
+2. Drag `HeliosSDK.xcframework` into the Xcode project.
 3. Add it to the application target under **Frameworks, Libraries, and Embedded Content**.
 4. Select **Embed & Sign** for an application target.
 
@@ -81,7 +89,7 @@ This is the same pattern used by the reference application.
 ```swift
 import Combine
 import CoreBluetooth
-import RFIDReaderConnect
+import HeliosSDK
 
 final class ReaderStore: ObservableObject, RFIDReaderDelegate {
     @Published private(set) var isConnected = false
@@ -305,4 +313,4 @@ When reporting an integration issue, include the Apple platform and version,
 Xcode version, reader model, transport, firmware version, and the delegate
 error description.
 
-Use of the SDK is governed by the [RFIDReaderConnect SDK License Agreement](LICENSE).
+Use of the SDK is governed by the [HeliosSDK License Agreement](LICENSE).

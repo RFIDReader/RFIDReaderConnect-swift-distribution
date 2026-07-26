@@ -1,15 +1,15 @@
 Pod::Spec.new do |spec|
-    spec.name          = "RFIDReaderConnect"
+    spec.name          = "HeliosSDK"
     spec.version       = "0.0.3"
     spec.summary       = "A multiplatform framework for RFID reading."
-    spec.homepage      = "https://github.com/RFIDReader/RFIDReaderConnect-swift-distribution"
+    spec.homepage      = "https://github.com/RFIDReader/HeliosSDK-swift-distribution"
     spec.license       = { :type => "Proprietary", :text => <<-LICENSE
-RFIDReaderConnect SDK License Agreement
+HeliosSDK License Agreement
 
 Copyright (c) 2025 Pratham Jaiswal. All rights reserved.
 
 1. Grant of License
-   Pratham Jaiswal ("Licensor") grants you ("Licensee") a non-exclusive, non-transferable, revocable license to use the RFIDReaderConnect SDK ("Software") solely for the purpose of integrating it into your applications, subject to the terms of this Agreement.
+   Pratham Jaiswal ("Licensor") grants you ("Licensee") a non-exclusive, non-transferable, revocable license to use the HeliosSDK ("Software") solely for the purpose of integrating it into your applications, subject to the terms of this Agreement.
 
 2. Ownership
    The Software is owned by Pratham Jaiswal and is protected by copyright laws and international treaties. All rights not expressly granted herein are reserved by the Licensor.
@@ -37,7 +37,7 @@ By using the Software, you agree to be bound by the terms of this Agreement.
                             LICENSE
                          }
     spec.author        = { "Pratham Jaiswal" => "pr47h4m@gmail.com" }
-    spec.source       = { :http => "https://github.com/RFIDReader/RFIDReaderConnect-swift-distribution/raw/refs/heads/master/releases/download/v0.0.3/RFIDReaderConnect.xcframework.zip" }
-    spec.vendored_frameworks = "RFIDReaderConnect.xcframework"
+    spec.source       = { :http => "https://github.com/RFIDReader/HeliosSDK-swift-distribution/raw/refs/heads/master/releases/download/v0.0.3/HeliosSDK.xcframework.zip" }
+    spec.vendored_frameworks = "HeliosSDK.xcframework"
     spec.platforms     = { :ios => "13.0", :macos => "13.0" }
 end
