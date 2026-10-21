@@ -37,7 +37,7 @@ By using the Software, you agree to be bound by the terms of this Agreement.
                             LICENSE
                          }
     spec.author        = { "Pratham Jaiswal" => "pr47h4m@gmail.com" }
-    spec.source       = { :http => "https://raw.githubusercontent.com/RFIDReader/RFIDReaderConnect-swift-distribution/883b1be0e343285a705676987aa64d33d6366366/releases/download/v0.0.4-rc.541bf13c/HeliosSDK.xcframework.zip" }
+    spec.source       = { :http => "https://raw.githubusercontent.com/RFIDReader/RFIDReaderConnect-swift-distribution/732316869235887d380c6bdf4d2d4ab2e667f6a6/releases/download/v0.0.4-rc.541bf13c/HeliosSDK.xcframework.zip" }
     spec.vendored_frameworks = "HeliosSDK.xcframework"
     spec.platforms     = { :ios => "13.0", :macos => "13.0" }
 end
