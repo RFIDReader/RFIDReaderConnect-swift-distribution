@@ -1,5 +1,8 @@
 # HeliosSDK for Apple platforms
 
+> Reader communication preview: **0.0.4-rc.541bf13c**. The [artifact provenance](artifact-provenance.json) records immutable source revisions, checksums, and verification. Run `make verify` to check the packaged binary.
+
+
 HeliosSDK is the supported Swift SDK for discovering, connecting to,
 configuring, and reading tags from RFIDReader hardware on iPhone, iPad, and
 Mac. This distribution repository contains the compiled XCFramework, Swift
