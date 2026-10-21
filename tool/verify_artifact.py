@@ -16,7 +16,7 @@ for name, expected in manifest["files"].items():
 artifact = root / manifest["artifact"]
 with zipfile.ZipFile(artifact) as archive:
     names = archive.namelist()
-    assert not any(name.endswith((".swift", ".kt", ".java", ".c")) for name in names), "Implementation source in binary"
+    assert not any(name.endswith((".swift", ".kt", ".java", ".c", ".swiftsourceinfo")) for name in names), "Implementation source in binary"
     assert all(not name.startswith("/") and ".." not in Path(name).parts for name in names), "Unsafe archive path"
     if manifest["platform"] == "android":
         with zipfile.ZipFile(io.BytesIO(archive.read("classes.jar"))) as classes:
