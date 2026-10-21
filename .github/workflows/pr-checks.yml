@@ -1,0 +1,30 @@
+name: Verify native distribution
+on:
+  pull_request:
+    branches: [rebranding, master]
+  push:
+    branches: [rebranding]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - run: make security-scan
+  apple-compatibility:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Compile and load the distributed framework with the hosted Swift compiler
+        run: |
+          set -euo pipefail
+          swift --version
+          artifact=$(python3 -c 'import json; print(json.load(open("artifact-provenance.json"))["artifact"])')
+          unpacked="$RUNNER_TEMP/helios-sdk-compatibility"
+          mkdir -p "$unpacked"
+          ditto -x -k "$artifact" "$unpacked"
+          frameworks="$unpacked/HeliosSDK.xcframework/macos-arm64_x86_64"
+          swiftc tool/BinaryConsumer.swift -F "$frameworks" -framework HeliosSDK \
+            -Xlinker -rpath -Xlinker "$frameworks" -o "$unpacked/consumer"
+          "$unpacked/consumer"

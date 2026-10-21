@@ -1,0 +1,24 @@
+{
+  "platform": "apple",
+  "version": "0.0.4-rc.541bf13c",
+  "source_repository": "RFIDReader/RFIDReaderConnect-swift",
+  "source_revision": "d51bdebd60eb860641326d8c7f47b50123c05a06",
+  "build_command": "make package",
+  "swift_compiler": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)",
+  "swift_language_version": "5",
+  "library_evolution": true,
+  "minimum_ios": "13.0",
+  "minimum_macos": "13.0",
+  "protection": "Optimized native binary with local symbols stripped; no implementation sources",
+  "tests": {
+    "unit_tests": 36,
+    "failures": 0,
+    "macos_binary_public_api": "loaded",
+    "ios13_public_api": "typechecked"
+  },
+  "artifact": "releases/download/v0.0.4-rc.541bf13c/HeliosSDK.xcframework.zip",
+  "files": {
+    "releases/download/v0.0.4-rc.541bf13c/HeliosSDK.xcframework.zip": "05044350004df60349add78a946db673053d596d80f022ab2c1cfbea34e2f9bc"
+  },
+  "module_selectors_in_interface": false
+}
