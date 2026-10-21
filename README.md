@@ -15,7 +15,7 @@ Package manifest, CocoaPods specification, and hosted API documentation.
 | Resource | Link |
 | --- | --- |
 | API reference | [Browse HeliosSDK documentation](docs/index.html) |
-| Swift Package | `https://github.com/RFIDReader/HeliosSDK-swift-distribution` |
+| Swift Package | `https://github.com/RFIDReader/RFIDReaderConnect-swift-distribution` |
 | Binary archive | [HeliosSDK.xcframework.zip](releases/download/v0.0.3/HeliosSDK.xcframework.zip) |
 | License | [HeliosSDK License Agreement](LICENSE) |
 
@@ -24,7 +24,7 @@ Package manifest, CocoaPods specification, and hosted API documentation.
 In Xcode, choose **File → Add Package Dependencies**, enter:
 
 ```text
-https://github.com/RFIDReader/HeliosSDK-swift-distribution
+https://github.com/RFIDReader/RFIDReaderConnect-swift-distribution
 ```
 
 Select the `HeliosSDK` product and add it to your application target.
@@ -33,7 +33,7 @@ For a package manifest, use:
 ```swift
 dependencies: [
     .package(
-        url: "https://github.com/RFIDReader/HeliosSDK-swift-distribution",
+        url: "https://github.com/RFIDReader/RFIDReaderConnect-swift-distribution",
         branch: "master"
     )
 ]
@@ -60,7 +60,7 @@ platform :ios, '13.0'
 
 target 'MyApp' do
   use_frameworks!
-  pod 'HeliosSDK', :podspec => 'https://raw.githubusercontent.com/RFIDReader/HeliosSDK-swift-distribution/master/HeliosSDK.podspec'
+  pod 'HeliosSDK', :podspec => 'https://raw.githubusercontent.com/RFIDReader/RFIDReaderConnect-swift-distribution/master/HeliosSDK.podspec'
 end
 ```
 
