@@ -34,6 +34,9 @@ with zipfile.ZipFile(artifact) as archive:
         libraries = info["AvailableLibraries"]
         identifiers = {lib["LibraryIdentifier"] for lib in libraries}
         assert identifiers == {"ios-arm64", "ios-arm64_x86_64-simulator", "macos-arm64_x86_64"}
+        for name in names:
+            if name.endswith(".swiftinterface"):
+                assert b"::" not in archive.read(name), "Interface requires a newer Swift compiler"
         for lib in libraries:
             prefix = f"HeliosSDK.xcframework/{lib['LibraryIdentifier']}/{lib['LibraryPath']}/"
             assert any(name.startswith(prefix) and name.endswith(".swiftinterface") for name in names)
